@@ -24,6 +24,10 @@
 		CF2747D417FCF85300CD1D77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2747AC17FCF85300CD1D77 /* Foundation.framework */; };
 		CF2747DC17FCF85300CD1D77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF2747DA17FCF85300CD1D77 /* InfoPlist.strings */; };
 		CF2747DF17FCF85300CD1D77 /* Discount_calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2747DE17FCF85300CD1D77 /* Discount_calculatorTests.m */; };
+		CF2747EC17FCFE3600CD1D77 /* MyDiscountView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2747EB17FCFE3600CD1D77 /* MyDiscountView.m */; };
+		CF2747EF17FD36B100CD1D77 /* UITextField+nextTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2747EE17FD36B100CD1D77 /* UITextField+nextTextField.m */; };
+		CF2747F217FD3A0400CD1D77 /* PriceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2747F117FD3A0400CD1D77 /* PriceDetails.m */; };
+		CF2747F517FD465700CD1D77 /* MyDiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2747F417FD465700CD1D77 /* MyDiscountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,14 @@
 		CF2747DB17FCF85300CD1D77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF2747DD17FCF85300CD1D77 /* Discount_calculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Discount_calculatorTests.h; sourceTree = "<group>"; };
 		CF2747DE17FCF85300CD1D77 /* Discount_calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Discount_calculatorTests.m; sourceTree = "<group>"; };
+		CF2747EA17FCFE3600CD1D77 /* MyDiscountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDiscountView.h; sourceTree = "<group>"; };
+		CF2747EB17FCFE3600CD1D77 /* MyDiscountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDiscountView.m; sourceTree = "<group>"; };
+		CF2747ED17FD36B100CD1D77 /* UITextField+nextTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+nextTextField.h"; sourceTree = "<group>"; };
+		CF2747EE17FD36B100CD1D77 /* UITextField+nextTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+nextTextField.m"; sourceTree = "<group>"; };
+		CF2747F017FD3A0400CD1D77 /* PriceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceDetails.h; sourceTree = "<group>"; };
+		CF2747F117FD3A0400CD1D77 /* PriceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceDetails.m; sourceTree = "<group>"; };
+		CF2747F317FD465700CD1D77 /* MyDiscountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDiscountViewController.h; sourceTree = "<group>"; };
+		CF2747F417FD465700CD1D77 /* MyDiscountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDiscountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,14 @@
 				CF2747BA17FCF85300CD1D77 /* CFAppDelegate.m */,
 				CF2747C217FCF85300CD1D77 /* MainStoryboard_iPhone.storyboard */,
 				CF2747C517FCF85300CD1D77 /* MainStoryboard_iPad.storyboard */,
+				CF2747F017FD3A0400CD1D77 /* PriceDetails.h */,
+				CF2747F117FD3A0400CD1D77 /* PriceDetails.m */,
+				CF2747ED17FD36B100CD1D77 /* UITextField+nextTextField.h */,
+				CF2747EE17FD36B100CD1D77 /* UITextField+nextTextField.m */,
+				CF2747F317FD465700CD1D77 /* MyDiscountViewController.h */,
+				CF2747F417FD465700CD1D77 /* MyDiscountViewController.m */,
+				CF2747EA17FCFE3600CD1D77 /* MyDiscountView.h */,
+				CF2747EB17FCFE3600CD1D77 /* MyDiscountView.m */,
 				CF2747C817FCF85300CD1D77 /* CFViewController.h */,
 				CF2747C917FCF85300CD1D77 /* CFViewController.m */,
 				CF2747B117FCF85300CD1D77 /* Supporting Files */,
@@ -278,6 +298,10 @@
 				CF2747B717FCF85300CD1D77 /* main.m in Sources */,
 				CF2747BB17FCF85300CD1D77 /* CFAppDelegate.m in Sources */,
 				CF2747CA17FCF85300CD1D77 /* CFViewController.m in Sources */,
+				CF2747EC17FCFE3600CD1D77 /* MyDiscountView.m in Sources */,
+				CF2747EF17FD36B100CD1D77 /* UITextField+nextTextField.m in Sources */,
+				CF2747F217FD3A0400CD1D77 /* PriceDetails.m in Sources */,
+				CF2747F517FD465700CD1D77 /* MyDiscountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

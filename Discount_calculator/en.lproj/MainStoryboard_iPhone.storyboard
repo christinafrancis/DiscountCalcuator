@@ -1,26 +1,297 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OCZ-ie-DBh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller - Discount Calculator-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="CFViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wY-6X-LnW">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" playsSound="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Qzq-tm-zNY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="VfP-X3-fvE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egI-De-gG1">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="sAd-qC-LcY"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n5W-bw-mgP">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="Czh-Ux-gbn"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kYE-lN-C5a">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="haM-sO-zfI"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="08l-bJ-I3h">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="vuj-k0-3mS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-PI-GJu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dollars Off" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-tQ-c6y">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Discount %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iub-An-U33">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add'l Disc. % " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZG-Cr-fxu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tax %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iik-dc-yGw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q27-Xu-3UM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCalculate:" destination="2" eventType="touchUpInside" id="7AO-ON-DkG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="237" translatesAutoresizingMaskIntoConstraints="NO" id="miy-8k-eue">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="Au0-MP-U0d"/>
+                                    <constraint firstAttribute="height" constant="47" id="vOW-k9-yDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="n5W-bw-mgP" firstAttribute="leading" secondItem="egI-De-gG1" secondAttribute="leading" type="default" id="0yr-Dt-bSF"/>
+                            <constraint firstAttribute="trailing" secondItem="0wY-6X-LnW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1ZK-9N-wD7"/>
+                            <constraint firstItem="egI-De-gG1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="67" id="9ZU-Fm-Jgv"/>
+                            <constraint firstAttribute="trailing" secondItem="miy-8k-eue" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="APZ-Tu-dt9"/>
+                            <constraint firstAttribute="trailing" secondItem="n5W-bw-mgP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BBK-De-80a"/>
+                            <constraint firstItem="aZG-Cr-fxu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="161" id="CXz-hU-Len"/>
+                            <constraint firstAttribute="bottom" secondItem="q27-Xu-3UM" secondAttribute="bottom" constant="42" id="Cir-Y9-LrS"/>
+                            <constraint firstItem="kYE-lN-C5a" firstAttribute="top" secondItem="aZG-Cr-fxu" secondAttribute="top" type="default" id="Ehv-AP-40t"/>
+                            <constraint firstItem="sDK-PI-GJu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="F1N-0a-OeE"/>
+                            <constraint firstItem="iik-dc-yGw" firstAttribute="leading" secondItem="aZG-Cr-fxu" secondAttribute="leading" type="default" id="H1h-Wx-pdp"/>
+                            <constraint firstItem="08l-bJ-I3h" firstAttribute="leading" secondItem="kYE-lN-C5a" secondAttribute="leading" type="default" id="OZX-dI-9Hl"/>
+                            <constraint firstItem="iik-dc-yGw" firstAttribute="leading" secondItem="miy-8k-eue" secondAttribute="leading" type="default" id="Tz8-l3-vzo"/>
+                            <constraint firstAttribute="trailing" secondItem="08l-bJ-I3h" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YZU-td-07N"/>
+                            <constraint firstItem="aZG-Cr-fxu" firstAttribute="leading" secondItem="iub-An-U33" secondAttribute="leading" type="default" id="Yf2-ak-GZ1"/>
+                            <constraint firstItem="aZG-Cr-fxu" firstAttribute="trailing" secondItem="iub-An-U33" secondAttribute="trailing" type="default" id="YpT-xE-bWu"/>
+                            <constraint firstItem="iub-An-U33" firstAttribute="top" secondItem="3" secondAttribute="top" constant="117" id="bAD-t6-OGf"/>
+                            <constraint firstAttribute="bottom" secondItem="miy-8k-eue" secondAttribute="bottom" constant="113" id="bXt-M7-1TI"/>
+                            <constraint firstItem="0wY-6X-LnW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cAG-CM-uNA"/>
+                            <constraint firstItem="iub-An-U33" firstAttribute="leading" secondItem="fVU-tQ-c6y" secondAttribute="leading" type="default" id="e3v-JE-7ez"/>
+                            <constraint firstItem="n5W-bw-mgP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="113" id="fey-Vt-o97"/>
+                            <constraint firstItem="fVU-tQ-c6y" firstAttribute="leading" secondItem="sDK-PI-GJu" secondAttribute="leading" type="default" id="kEg-cv-Ers"/>
+                            <constraint firstAttribute="trailing" secondItem="kYE-lN-C5a" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kzV-VL-GUC"/>
+                            <constraint firstItem="08l-bJ-I3h" firstAttribute="top" secondItem="iik-dc-yGw" secondAttribute="top" type="default" id="llU-VG-eT7"/>
+                            <constraint firstItem="egI-De-gG1" firstAttribute="baseline" secondItem="fVU-tQ-c6y" secondAttribute="baseline" type="default" id="mlH-Qk-Vfg"/>
+                            <constraint firstItem="egI-De-gG1" firstAttribute="leading" secondItem="0wY-6X-LnW" secondAttribute="leading" type="default" id="o4c-6s-POs"/>
+                            <constraint firstItem="q27-Xu-3UM" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="oXf-d3-3QK"/>
+                            <constraint firstAttribute="trailing" secondItem="egI-De-gG1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ofZ-45-A1A"/>
+                            <constraint firstItem="n5W-bw-mgP" firstAttribute="leading" secondItem="kYE-lN-C5a" secondAttribute="leading" type="default" id="qb6-Li-xPp"/>
+                            <constraint firstItem="iik-dc-yGw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="203" id="uxl-XF-yLS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Discount Calculator" id="3wV-AW-ElI"/>
+                    <connections>
+                        <outlet property="lb_result" destination="miy-8k-eue" id="h4l-Gr-jyV"/>
+                        <outlet property="tf_addDisc" destination="kYE-lN-C5a" id="hEk-xO-pVZ"/>
+                        <outlet property="tf_disc" destination="n5W-bw-mgP" id="ueD-6h-US9"/>
+                        <outlet property="tf_dollorsOff" destination="egI-De-gG1" id="8ES-El-BFb"/>
+                        <outlet property="tf_price" destination="0wY-6X-LnW" id="IQv-zS-5GW"/>
+                        <outlet property="tf_tax" destination="08l-bJ-I3h" id="UB9-B1-dfy"/>
+                        <segue destination="1ot-SM-jaA" kind="push" identifier="mainToDisplay" id="P8E-c0-kdn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="566" y="52"/>
+        </scene>
+        <!--My Discount View Controller - Result-->
+        <scene sceneID="wzP-gS-zf3">
+            <objects>
+                <viewController id="1ot-SM-jaA" customClass="MyDiscountViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7tB-V6-bla" customClass="MyDiscountView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="122" translatesAutoresizingMaskIntoConstraints="NO" id="Ysk-bI-ocd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="0cY-td-cYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="save_price" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="102" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-bO-NnC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="YaB-MM-rfY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="save_perc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-FT-wTz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Lu5-yX-F6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="disc_price" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="92" translatesAutoresizingMaskIntoConstraints="NO" id="fEm-Wh-iWF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="2qG-il-rfg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="disc_perc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="XvM-wQ-1Nm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4j9-kf-a3V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XvM-wQ-1Nm" secondAttribute="bottom" constant="5" id="46P-AW-sbX"/>
+                            <constraint firstItem="Aaq-bO-NnC" firstAttribute="top" secondItem="7tB-V6-bla" secondAttribute="top" constant="37" id="AAT-TK-52q"/>
+                            <constraint firstAttribute="bottom" secondItem="WsZ-FT-wTz" secondAttribute="bottom" constant="52" id="BCo-sf-x1r"/>
+                            <constraint firstItem="WsZ-FT-wTz" firstAttribute="centerX" secondItem="fEm-Wh-iWF" secondAttribute="centerX" type="default" id="GeE-L2-0Zy"/>
+                            <constraint firstAttribute="bottom" secondItem="Ysk-bI-ocd" secondAttribute="bottom" constant="25" id="IlZ-ms-eQj"/>
+                            <constraint firstItem="fEm-Wh-iWF" firstAttribute="top" secondItem="7tB-V6-bla" secondAttribute="top" constant="112" id="Luf-fY-Hdd"/>
+                            <constraint firstAttribute="trailing" secondItem="WsZ-FT-wTz" secondAttribute="trailing" constant="5" id="S3h-FN-2sN"/>
+                            <constraint firstAttribute="trailing" secondItem="XvM-wQ-1Nm" secondAttribute="trailing" constant="11" id="YnB-q0-OvF"/>
+                            <constraint firstItem="Ysk-bI-ocd" firstAttribute="leading" secondItem="7tB-V6-bla" secondAttribute="leading" constant="14" id="dbW-hv-86m"/>
+                            <constraint firstAttribute="trailing" secondItem="Aaq-bO-NnC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="o3U-FR-T8o"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="lb_disc_perc" destination="XvM-wQ-1Nm" id="KpV-bX-7RW"/>
+                            <outlet property="lb_disc_price" destination="fEm-Wh-iWF" id="1oe-BR-haT"/>
+                            <outlet property="lb_price" destination="Ysk-bI-ocd" id="INN-RL-zYM"/>
+                            <outlet property="lb_save_perc" destination="WsZ-FT-wTz" id="z0q-7s-S9L"/>
+                            <outlet property="lb_save_price" destination="Aaq-bO-NnC" id="bhX-Up-9i7"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Result" id="zff-eW-ZtS"/>
+                    <connections>
+                        <outlet property="lb_disc_perc" destination="XvM-wQ-1Nm" id="kiJ-p4-bu9"/>
+                        <outlet property="lb_disc_price" destination="fEm-Wh-iWF" id="Gdz-eY-gjU"/>
+                        <outlet property="lb_price" destination="Ysk-bI-ocd" id="AAa-MJ-FMP"/>
+                        <outlet property="lb_save_perc" destination="WsZ-FT-wTz" id="j0t-RY-wKn"/>
+                        <outlet property="lb_save_price" destination="Aaq-bO-NnC" id="uwL-fe-38w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCf-gC-COt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3w4-Fp-Dlg">
+            <objects>
+                <navigationController id="OCZ-ie-DBh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D3o-5n-vWz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="D6p-Cn-Q9o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aW-36-54y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="52"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CFViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handleCalculate:"/>
+                <relationship kind="outlet" name="lb_result" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tf_addDisc" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tf_disc" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tf_dollorsOff" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tf_price" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tf_tax" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MyDiscountView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyDiscountView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lb_disc_perc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_disc_price" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_price" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_save_perc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_save_price" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyDiscountViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyDiscountViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lb_disc_perc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_disc_price" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_price" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_save_perc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lb_save_price" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
